@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Sora } from "next/font/google";
 import "./globals.css";
+import { constructMetadata } from "@/utils/metadata";
 
 const sora = Sora({
   subsets: ["latin"],
@@ -8,11 +9,7 @@ const sora = Sora({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
 });
 
-export const metadata: Metadata = {
-  title: "Hesham's Portfolio",
-  description:
-    "Hesham El-Mahdi's Portfolio. A software engineer from Cairo, Egypt. Based in Indiana, USA. Specializing in web development and automation.",
-};
+export const metadata: Metadata = constructMetadata();
 
 export default function RootLayout({
   children,

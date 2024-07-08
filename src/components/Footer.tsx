@@ -76,7 +76,7 @@ const Footer = () => {
               Terms of Service
             </a>
           </div> */}
-          <p>Copyright © 2024 Hesham El-Mahdi</p>
+          <p>Copyright © {new Date().getFullYear()} Hesham El-Mahdi</p>
           <div className="flex ml-14 gap-6">
             <p className="font-thin">heshamelmahdi@gmail.com</p>
             <p className="font-thin">+17652404848</p>

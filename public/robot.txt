@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.heshamelmahdi.com/sitemap.xml
+Sitemap: https://heshamelmahdi.com/sitemap.xml
