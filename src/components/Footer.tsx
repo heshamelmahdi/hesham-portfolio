@@ -2,10 +2,11 @@
 
 import Link from "next/link";
 import { RiGithubLine, RiLinkedinLine } from "react-icons/ri";
+import Socials from "./headerComponents/Socials";
 
 const Footer = () => {
   return (
-    <footer className="w-full pb-10 px-10">
+    <footer className="w-full pb-10 px-10 z-10">
       {/* <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw]">
           Ready to take <span className="text-phieg-secondary">your</span> sales
@@ -81,7 +82,8 @@ const Footer = () => {
             <p className="font-thin">+17652404848</p>
             <p className="font-thin">+201156659292</p>
           </div>
-          <div className="flex gap-6">
+          <Socials />
+          {/* <div className="flex gap-6">
             <Link
               href={"https://github.com/heshamelmahdi"}
               target="_blank"
@@ -96,7 +98,7 @@ const Footer = () => {
             >
               <RiLinkedinLine />
             </Link>
-          </div>
+          </div> */}
         </div>
 
         {/* <div className="flex items-center md:gap-3 gap-6 mt-3 md:mt-0">
