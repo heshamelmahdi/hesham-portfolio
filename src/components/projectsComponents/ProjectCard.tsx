@@ -1,11 +1,12 @@
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { ProjectsDescription, ProjectsTitle } from "./ProjectsText";
 import { Cairo3DPrint, Phieg, PhiegCRM } from "./ProjectTechStack";
+import Image from "next/image";
 
 const ProjectCard = ({ id }: { id: number }) => {
-  const videoMap = [
+  const projectMap = [
     {
-      src: "/Phieg_COM.mp4",
+      src: "/websites/phieg.png",
       titleNormal: "",
       titleAccented: "Phieg",
       description:
@@ -13,7 +14,7 @@ const ProjectCard = ({ id }: { id: number }) => {
       stack: <Phieg />,
     },
     {
-      src: "/Cairo3DPrint.mp4",
+      src: "/websites/cairo3dprint.png",
       titleNormal: "",
       titleAccented: "CAIRO3DPRINT",
       description:
@@ -21,7 +22,7 @@ const ProjectCard = ({ id }: { id: number }) => {
       stack: <Cairo3DPrint />,
     },
     {
-      src: "/Phieg_CRM.mp4",
+      src: "/websites/phiegcrm.png",
       titleNormal: "",
       titleAccented: "PhiegCRM",
       description:
@@ -30,7 +31,7 @@ const ProjectCard = ({ id }: { id: number }) => {
     },
   ];
 
-  const proj = videoMap[id];
+  const proj = projectMap[id];
 
   return (
     <div className="flex flex-col xl:flex-row gap-x-8 py-10 px-8 w-full justify-between h-full">
@@ -48,9 +49,15 @@ const ProjectCard = ({ id }: { id: number }) => {
         </div>
       </div>
       <div className="h-auto w-full md:w-[70vw] rounded-xl">
-        <video autoPlay loop muted playsInline className="rounded-xl">
-          <source src={proj.src} type="video/mp4" />
-        </video>
+        <Image
+          src={proj.src}
+          alt="project screenshot"
+          width={500}
+          height={300}
+          priority={true}
+          className="rounded-xl"
+          quality={100}
+        />
       </div>
     </div>
   );
