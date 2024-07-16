@@ -48,7 +48,7 @@ const ProjectCard = ({ id }: { id: number }) => {
           {proj.stack}
         </div>
       </div>
-      <div className="h-auto w-full md:w-[70vw] rounded-xl">
+      <div className="h-auto w-full md:w-[70vw] max-h-[40vh] rounded-xl">
         <Image
           src={proj.src}
           alt="project screenshot"
